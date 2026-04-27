@@ -58,20 +58,27 @@ function initNavbar() {
     });
 
     const menu = document.getElementById("menuToggle");
-    if (menu) {
+    const navLinks = document.getElementById("navLinks");
+    
+    if (menu && navLinks) {
         menu.addEventListener("click", (e) => {
             e.stopPropagation();
-            const navLinks = document.getElementById("navLinks");
             navLinks.classList.toggle("active");
         });
     }
 
-    // Close menu when clicking outside
+    // Close menu when clicking a link
+    const links = document.querySelectorAll('.nav-links a');
+    links.forEach(link => {
+        link.addEventListener('click', () => {
+            if (navLinks) navLinks.classList.remove("active");
+        });
+    });
+
+    // Close menu when clicking outside (on the site)
     document.addEventListener('click', (e) => {
-        const navLinks = document.getElementById("navLinks");
-        const menuToggle = document.getElementById("menuToggle");
-        if (navLinks && menuToggle && navLinks.classList.contains("active") &&
-            !menuToggle.contains(e.target) && !navLinks.contains(e.target)) {
+        if (navLinks && menu && navLinks.classList.contains("active") &&
+            !menu.contains(e.target) && !navLinks.contains(e.target)) {
             navLinks.classList.remove("active");
         }
     });

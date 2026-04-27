@@ -12,7 +12,7 @@
         href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Poppins:wght@400;500;600;700&family=Tajawal:wght@300;400;500;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -45,16 +45,12 @@
         </div>
 
         <section class="gallery-section container">
-            <div class="gallery-header">
-                <h2 class="section-title">نتائج عملياتنا</h2>
-                <p class="gallery-subtitle">شاهدي الفرق الفعلي في نتائج عملائنا الحقيقيين</p>
-            </div>
-
-            <div class="gallery-filters">
-                <button class="filter-btn active" data-filter="all">الكل</button>
-                <button class="filter-btn" data-filter="nose">رأب الأنف</button>
-                <button class="filter-btn" data-filter="liposuction">شفط الدهون</button>
-                <button class="filter-btn" data-filter="face">شد الوجه</button>
+            <div class="gallery-header-premium">
+                <div class="badge-accent">نتائج حقيقية</div>
+                <h2 class="premium-title">رحلة التغيير والجمال</h2>
+                <div class="title-glow-line"></div>
+                <p class="premium-subtitle">نؤمن أن كل حالة هي قصة نجاح فريدة، اكتشفي الفرق الذي يصنعه دقة الجراحة وفن
+                    التجميل في نتائج عملائنا الحقيقيين.</p>
             </div>
 
             <div class="gallery-grid">
@@ -65,9 +61,6 @@
                             <img src="before1.png" alt="قبل - رأب أنف" class="before-img" loading="lazy">
                             <img src="after1.png" alt="بعد - رأب أنف" class="after-img" loading="lazy">
                         </div>
-                        <div class="before-after-divider"></div>
-                        <span class="before-after-label label-before">قبل</span>
-                        <span class="before-after-label label-after">بعد</span>
                         <div class="gallery-overlay">
                             <span>رأب أنف - تحسين الشكل الطبيعي</span>
                         </div>
@@ -81,9 +74,6 @@
                             <img src="before2.png" alt="قبل - شفط دهون" class="before-img" loading="lazy">
                             <img src="after2.png" alt="بعد - شفط دهون" class="after-img" loading="lazy">
                         </div>
-                        <div class="before-after-divider"></div>
-                        <span class="before-after-label label-before">قبل</span>
-                        <span class="before-after-label label-after">بعد</span>
                         <div class="gallery-overlay">
                             <span>شفط دهون البطن - Vaser 360</span>
                         </div>
@@ -108,14 +98,20 @@
                 </div>
             </div>
 
-            <div class="gallery-stats">
-                <div class="stat">
-                    <span class="number">+1000</span>
-                    <span>صورة قبل وبعد</span>
+            <div class="gallery-stats-premium">
+                <div class="stat-card-premium">
+                    <div class="stat-icon"><i class="fas fa-images"></i></div>
+                    <div class="stat-info">
+                        <span class="number">+1000</span>
+                        <span class="label">صورة قبل وبعد</span>
+                    </div>
                 </div>
-                <div class="stat">
-                    <span class="number">99%</span>
-                    <span>رضا العملاء</span>
+                <div class="stat-card-premium">
+                    <div class="stat-icon"><i class="fas fa-star"></i></div>
+                    <div class="stat-info">
+                        <span class="number">99%</span>
+                        <span class="label">رضا العملاء</span>
+                    </div>
                 </div>
             </div>
         </section>
@@ -134,7 +130,7 @@
         </div>
     </footer>
 
-    <script src="./main.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
